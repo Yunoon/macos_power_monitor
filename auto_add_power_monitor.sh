@@ -6,6 +6,8 @@ read -p "请输入您的脚本路径和文件名（例如 /Users/yourusername/Sc
 # 获取用户名
 read -p "请输入您的用户名：" username
 
+mkdir /Users/"$username"/Scripts
+
 # 将脚本复制到指定目录
 sudo cp "$script_path" /Users/"$username"/Scripts/
 
