@@ -13,7 +13,7 @@ mkdir /Users/"$username"/Scripts/logs
 sudo cp "$script_path" /Users/"$username"/Scripts/
 
 # 创建Property List文件
-sudo bash -c 'cat > /Library/LaunchAgents/com.'"$username"'.power_management.plist << EOF
+sudo bash -c 'cat > /Library/LaunchDaemons/com.'"$username"'.power_management.plist << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" \
   "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -34,8 +34,8 @@ sudo bash -c 'cat > /Library/LaunchAgents/com.'"$username"'.power_management.pli
 </plist>
 EOF'
 
-# 加载Property List到LaunchAgents
-sudo launchctl load /Library/LaunchAgents/com."$username".power_management.plist
+# 加载Property List到LaunchDaemons
+sudo launchctl load /Library/LaunchDaemons/com."$username".power_management.plist
 
 # 启动脚本
 sudo launchctl start com."$username".power_management
