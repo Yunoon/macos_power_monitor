@@ -34,6 +34,8 @@ sudo bash -c 'cat > /Library/LaunchDaemons/com.'"$username"'.power_management.pl
 </plist>
 EOF'
 
+sudo chmod 644 /Library/LaunchDaemons/com."$username".power_management.plist
+
 # 加载Property List到LaunchDaemons
 sudo launchctl load /Library/LaunchDaemons/com."$username".power_management.plist
 
