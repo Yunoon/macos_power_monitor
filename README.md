@@ -27,5 +27,7 @@ chmod +x power_monitor.sh
 3. 需要注意的是`power_monitor.sh`中的`power_status`的获取，请先执行一次`pmset -g ps | grep "Now drawing from" | awk '{print $4}'`看看获取的结果是什么。12.6.3的环境下是`'AC`少了一个引号。
 
 ### 使用
-添加 `./auto_add_power_monitor.sh`
-删除 `./auto_del_power_monitor.sh`
+
+添加脚本 `./auto_add_power_monitor.sh`
+
+删除脚本 `./auto_del_power_monitor.sh`
